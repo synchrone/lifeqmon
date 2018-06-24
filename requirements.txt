@@ -1,0 +1,6 @@
+smbus-cffi
+pyserial
+datadog
+
+
+soundmeter

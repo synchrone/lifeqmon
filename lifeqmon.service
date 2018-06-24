@@ -1,0 +1,15 @@
+[Unit]
+Description=reports life quality sensors to datadog
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+EnvironmentFile=/home/pi/co2-fan-driver/lifeqmon.env
+ExecStart=/home/pi/co2-fan-driver/env/bin/python /home/pi/co2-fan-driver/main.py
+Restart=always
+TimeoutStartSec=10
+RestartSec=10
+
+[Install]
+WantedBy = multi-user.target
